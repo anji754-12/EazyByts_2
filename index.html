@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trading Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>📈 Stock Trading Simulator</h1>
+    </header>
+
+    <!-- Trading Interface -->
+    <div class="trading-container">
+        <h2>Trade Stocks</h2>
+        <form id="tradeForm">
+            <label for="stockSymbol">Stock Symbol:</label>
+            <input type="text" id="stockSymbol" placeholder="e.g., AAPL" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" placeholder="Enter quantity" required>
+
+            <label for="price">Price per share ($):</label>
+            <input type="number" id="price" step="0.01" placeholder="Enter price" required>
+
+            <label for="transactionType">Transaction Type:</label>
+            <select id="transactionType" required>
+                <option value="BUY">BUY</option>
+                <option value="SELL">SELL</option>
+            </select>
+
+            <button type="submit">Execute Trade</button>
+        </form>
+    </div>
+
+    <!-- Portfolio Display -->
+    <div class="portfolio-container">
+        <h2>📊 Portfolio</h2>
+        <table id="portfolioTable">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Quantity</th>
+                    <th>Average Price ($)</th>
+                    <th>Total Value ($)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
